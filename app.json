@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/center/center"
+  ],
+  "window":
+  {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "backgroundTextStyle": "dark",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":
+  {
+    "color": "#ccc",
+    "selectedColor": "#ffa800",
+    "borderStyle": "#f7f7f7",
+    "backgroundColor": "#fff",
+    "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./assets/title0-2@3x.png",
+      "selectedIconPath": "./assets/title0-1@3x.png"
+    },
+    {
+      "pagePath": "pages/order/order",
+      "text": "订单",
+      "iconPath": "./assets/title2-2@3x.png",
+      "selectedIconPath": "./assets/title2-1@3x.png"
+    },
+    {
+      "pagePath": "pages/center/center",
+      "text": "我的",
+      "iconPath": "./assets/title3-2@3x.png",
+      "selectedIconPath": "./assets/title3-1@3x.png"
+    }]
+  }
+}
