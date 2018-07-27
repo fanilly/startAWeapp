@@ -13,21 +13,29 @@ Page({
 
   async onLoad() {
 
+    // this.instance = new PageToBaseList(this,{});
+    // this.instance.render();
 
-    // new PageToBaseList(this, {
-    //   hash: '5b49ae292625a'
-    // }).setPostData({
-    //   user_id: app.globalData.userid
-    // }).render();
+    let mockData = await (() => (
+      new Promise(resolve => {
+        setTimeout(() => {
+          resolve(Mock.mock({
+            'list|10': [{
+              'id|+1': 1,
+              'desc|5-10': '描述文字',
+              color: '@color()',
+              image: "@image(750x300)",
+              name: '@cname()'
+            }]
+          }).list);
+        }, 1500);
+      })))();
+    console.log(mockData)
 
-    let data = Mock.mock({
-      'list|1-10': [{
-        'id|+1': 1
-      }]
-    });
+  },
 
-    console.log(data)
-
+  onReachBottom() {
+    // this.instance.reachBottom();
   },
 
   sleep(s) {

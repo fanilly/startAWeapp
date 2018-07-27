@@ -1,4 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-{{testData}}
+  <view class="list-item" wx:for="{{lists}}" wx:key="{{index}}">
+    <view class="title" style="color:{{item.color}};font-size: 30rpx; line-height: 100rpx;">{{item.id + ':' + item.name}}</view>
+    <image src="{{item.image}}" style="width: 750rpx;height: 300rpx;"></image>
+  </view>
 </view>

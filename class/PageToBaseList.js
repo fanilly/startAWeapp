@@ -9,18 +9,18 @@ const app = getApp();
 
 export default class PageToBaseList {
 
-  constructor(page, options) {
+  constructor(page = null, options) {
     this.page = page;
     this.hash = options.hash || options;
     this.method = options.method || 'GET';
     this.header = options.header || { 'Content-Type': 'application/json' };
     this.curPage = 1;
-    this.page.onReachBottom = this.onReachBottom;
   }
 
   render() {
     if (this.addFn) this.addFn();
     this.getLists();
+    return this;
   }
 
   setPostData(data) {
@@ -57,7 +57,7 @@ export default class PageToBaseList {
     })
   }
 
-  onReachBottom() {
+  reachBottom() {
     if (this.page.data.listNoData || this.page.data.listLoadedAll) return;
     this.getLists();
   }
